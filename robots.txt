@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jimmythegod100.github.io/web-portfolio/sitemap.xml
