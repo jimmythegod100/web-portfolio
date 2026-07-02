@@ -32,7 +32,7 @@ HOW I WORK
 2. Design — mockups with revisions until you're happy
 3. Build & launch — tested, deployed, and handed off with training
 
-Currently accepting new projects. DM me or email andrewjamesmartinez91@gmail.com — I respond within 24 hours.
+Currently accepting new projects. DM me or email vincentmartinez9410@gmail.com — I respond within 24 hours.
 
 Portfolio: https://jimmythegod100.github.io/web-portfolio/
 ```

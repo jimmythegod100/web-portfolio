@@ -34,7 +34,7 @@ I will redesign and modernize your outdated website
 ## Seller Description (About)
 
 ```
-👋 Hi, I'm Andrew — a web developer with 35+ websites delivered for restaurants, agencies, coaches, and small businesses across the US.
+👋 Hi, I'm Vincent — a web developer with 35+ websites delivered for restaurants, agencies, coaches, and small businesses across the US.
 
 I don't just make pretty sites. I build websites that load fast, look great on phones, and turn visitors into paying customers.
 

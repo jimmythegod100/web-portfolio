@@ -8,7 +8,7 @@ Web Developer | Custom Websites, Landing Pages & E-commerce Stores
 ## Overview / Bio
 
 ```
-Hi — I'm Andrew, a web developer who builds fast, professional websites for businesses that need to look credible online and actually convert visitors into customers.
+Hi — I'm Vincent, a web developer who builds fast, professional websites for businesses that need to look credible online and actually convert visitors into customers.
 
 WHAT I BUILD
 • Business websites (5–15 pages) — WordPress, custom HTML, or modern frameworks

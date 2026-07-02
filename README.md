@@ -19,7 +19,7 @@ Your portfolio is fully built — photos, project screenshots, about section, FA
 
 ## Contact Form
 
-Submissions go to **andrewjamesmartinez91@gmail.com** via FormSubmit. The first submission triggers a one-time activation email — click the link once and every future inquiry arrives automatically.
+Submissions go to **vincentmartinez9410@gmail.com** via FormSubmit. The first submission triggers a one-time activation email — click the link once and every future inquiry arrives automatically.
 
 ## Use on Client Platforms
 
