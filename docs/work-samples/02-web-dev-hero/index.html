@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Sample — Vincere Media Works</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#">Pulse Studio</a>
+    <a class="header-cta" href="#book">Book a class</a>
+  </header>
+
+  <section class="hero" aria-labelledby="hero-heading">
+    <!-- Background image placeholder: replace src with studio photography -->
+    <div
+      class="hero__media"
+      role="img"
+      aria-label="Boutique fitness studio interior placeholder"
+      style="--hero-image: url('https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1600&q=80');"
+    ></div>
+    <div class="hero__overlay" aria-hidden="true"></div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow">Boutique fitness · Downtown</p>
+      <h1 id="hero-heading">Small classes. Real progress.</h1>
+      <p class="hero__lede">
+        Book reformer Pilates, strength circuits, and mobility sessions in under a minute—
+        built for busy schedules, not endless DMs.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" id="book" href="#book">Book a class</a>
+        <a class="btn btn--ghost" href="#schedule">View today’s schedule</a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
