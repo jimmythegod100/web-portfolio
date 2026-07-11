@@ -2,7 +2,7 @@
 
 Run this on the **iMac** (primary build machine). MacBook can stay light: Git + Cursor + browser.
 
-**Repo path on disk:** `~/Projects/vincent-web-portfolio` (or `web-portfolio` if that is your local clone name)
+**Repo path on disk:** `~/Projects/web-portfolio` (symlink `~/Projects/vincent-web-portfolio` optional)
 
 ## 1. Install checklist
 

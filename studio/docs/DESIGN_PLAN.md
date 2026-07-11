@@ -140,8 +140,8 @@ MacBook: git pull + edit docs/HTML. Heavy `docker compose build` → iMac.
 - [x] Optional Postgres persistence path
 - [x] Healthchecks + smoke script
 - [x] Scope contract + handoff templates
-- [ ] iMac has Docker Desktop + Python 3.12+ + Node + Git + gh
-- [ ] `make up` + `make smoke` green on iMac
+- [x] iMac has Docker Desktop + Python 3.12+ + Node + Git + gh
+- [x] `make up` + `make smoke` green on iMac
 
 ---
 

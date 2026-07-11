@@ -19,6 +19,7 @@ make new-client NAME=demo-brand
 | [docs/SETUP_IMAC.md](docs/SETUP_IMAC.md) | Software list & install steps |
 | [docs/CLIENT_CHECKLIST.md](docs/CLIENT_CHECKLIST.md) | Per-project delivery checklist |
 | [docs/templates/SCOPE_CONTRACT.md](docs/templates/SCOPE_CONTRACT.md) | Tier B scope / payment template |
+| [docs/CLIENT_ACQUISITION.md](docs/CLIENT_ACQUISITION.md) | Vincere channel strategy & ideal clients |
 | [showcase/valley-oak/](showcase/valley-oak/) | Committed practice demo |
 
 ## Layout
