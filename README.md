@@ -45,3 +45,14 @@ Open http://localhost:8080
 
 - `docs/PROCESS.md` — full build/deploy workflow
 - `docs/INTEGRATIONS.md` — add Calendly, social, payment links job-by-job
+
+## Studio (iMac build environment)
+
+Custom Docker + Python practice stack and client project factory live in [`studio/`](studio/).  
+Primary build machine: **iMac** (storage + Docker). See:
+
+- [studio/docs/DESIGN_PLAN.md](studio/docs/DESIGN_PLAN.md) — architecture & design rules
+- [studio/docs/SETUP_IMAC.md](studio/docs/SETUP_IMAC.md) — software install checklist
+- [studio/README.md](studio/README.md) — quick start (`bootstrap-imac.sh`, `make up`, `make new-client`)
+
+Wix client work stays on the public portfolio path above; the studio is for learning and future custom builds.

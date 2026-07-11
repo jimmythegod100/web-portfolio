@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="__CLIENT_NAME__ — replace with client tagline.">
+  <title>__CLIENT_NAME__</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top">__CLIENT_NAME__</a>
+      <nav aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-atmosphere" aria-hidden="true"></div>
+      <div class="container hero-copy">
+        <p class="eyebrow">__CLIENT_NAME__</p>
+        <h1>One clear promise for your visitors</h1>
+        <p class="lede">Replace this sentence with what the client does — keep it short.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#contact">Get in touch</a>
+          <a class="btn ghost" href="#about">Learn more</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container narrow">
+        <h2>About</h2>
+        <p>Tell the client’s story in one short paragraph. One job per section.</p>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container narrow">
+        <h2>Contact</h2>
+        <p>Messages go to the Python API at <code>/api/contact</code>.</p>
+        <form id="contact-form" class="contact-form">
+          <label>
+            Name
+            <input name="name" type="text" required maxlength="120" autocomplete="name">
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" required autocomplete="email">
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="4" required maxlength="2000"></textarea>
+          </label>
+          <button type="submit" class="btn primary">Send message</button>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> __CLIENT_NAME__</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
