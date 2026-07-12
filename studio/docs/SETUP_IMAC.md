@@ -11,17 +11,18 @@ Run this on the **iMac** (primary build machine). MacBook can stay light: Git + 
 | **Homebrew** | Package manager | https://brew.sh |
 | **Git** | Version control | `brew install git` |
 | **GitHub CLI (`gh`)** | Push, PRs, Pages | `brew install gh` |
-| **Docker Desktop** | Containers (preferred on iMac) | https://docker.com/products/docker-desktop |
+| **Podman** (+ `docker` CLI symlink) | Containers (preferred on this iMac) | `brew install podman` |
+| **Docker Desktop** (optional) | Containers UI alternative | https://docker.com/products/docker-desktop |
 | **Python 3.12+** | Backend / scripts | `brew install python@3.12` |
 | **Node.js 22 LTS** (via nvm or brew) | Frontend tooling if needed | `brew install node` or nvm |
 | **Cursor** | Coding | Already in use |
 | **PostgreSQL client** (optional) | Inspect DB | `brew install libpq` |
 
-**Alternative to Docker Desktop:** Podman (`brew install podman`) — Docker Desktop is simpler for learning.
+**Preferred runtime:** Podman (`docker` CLI → podman). Docker Desktop is optional.
 
 ### Disk budget (plan for)
 
-- Docker Desktop + images: **~8–15 GB**
+- Podman machine + images: **~8–15 GB**
 - 3–5 practice/client projects: **~3–8 GB**
 - Leave **≥40 GB free** on the iMac for comfortable builds
 
@@ -31,9 +32,10 @@ Run this on the **iMac** (primary build machine). MacBook can stay light: Git + 
 cd ~/Projects/vincent-web-portfolio/studio
 chmod +x scripts/*.sh
 ./scripts/bootstrap-imac.sh
+make ensure-runtime
 ```
 
-The script installs missing Homebrew packages, checks Docker, copies `.env.example` → `.env`, and prints next steps.
+The script installs missing Homebrew packages, checks Podman/docker, copies `.env.example` → `.env`, and prints next steps.
 
 ## 3. First run
 
@@ -50,7 +52,7 @@ make smoke
    `DATABASE_URL=postgresql+psycopg://studio:studio_dev_change_me@db:5432/studio`
 2. `make up-db`
 
-## 4. Showcase + new client
+## 4. Showcase + new client + handoff
 
 ```bash
 make showcase
@@ -59,8 +61,13 @@ make showcase
 make new-client NAME=sunrise-bakery
 cd clients/sunrise-bakery
 docker compose up --build
+
+# When ready to send to the client:
+make handoff NAME=sunrise-bakery DO_ZIP=1
+# → handoffs/sunrise-bakery-handoff-YYYYMMDD.zip
 ```
 
+Full handoff guide: [DOCKER-HANDOFF.md](DOCKER-HANDOFF.md).
 ## 5. Cursor recommendations
 
 Open the whole repo. Suggested extensions live in `studio/.vscode/extensions.json` (Python, Docker).

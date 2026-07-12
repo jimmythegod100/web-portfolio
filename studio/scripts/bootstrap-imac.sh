@@ -36,23 +36,33 @@ ensure_pkg python@3.12 || ensure_pkg python
 ensure_pkg node
 
 echo
-echo "==> Container runtime"
-if command -v docker >/dev/null 2>&1; then
+echo "==> Container runtime (Podman preferred on this iMac)"
+if command -v podman >/dev/null 2>&1; then
+  echo "  ✓ podman found: $(podman --version)"
+  if command -v docker >/dev/null 2>&1; then
+    echo "  ✓ docker CLI: $(command -v docker) → $(docker --version 2>/dev/null | head -1)"
+  fi
+  if ! docker info >/dev/null 2>&1; then
+    echo "  → starting Podman machine…"
+    "$ROOT/scripts/ensure-runtime.sh" || {
+      echo "  ! Runtime not ready. Run: make ensure-runtime"
+    }
+  else
+    echo "  ✓ docker info OK"
+  fi
+elif command -v docker >/dev/null 2>&1; then
   echo "  ✓ docker found: $(docker --version)"
   if ! docker info >/dev/null 2>&1; then
-    echo "  ! Docker is installed but not running. Open Docker Desktop on the iMac, then re-run: make up"
+    echo "  ! Docker is installed but not running. Start Docker Desktop, then: make up"
   fi
-elif command -v podman >/dev/null 2>&1; then
-  echo "  ✓ podman found: $(podman --version)"
-  echo "  Tip: alias docker=podman if you prefer, or install Docker Desktop for a simpler UI."
 else
-  echo "  → Docker Desktop not found."
-  echo "    Install: https://www.docker.com/products/docker-desktop/"
-  echo "    Or: brew install --cask docker"
-  if [[ "${INSTALL_DOCKER:-}" == "1" ]]; then
-    brew install --cask docker || true
-  else
-    echo "    (Set INSTALL_DOCKER=1 to let this script try brew cask install.)"
+  echo "  → No container runtime found."
+  echo "    Preferred: brew install podman && podman machine init && podman machine start"
+  echo "    Or Docker Desktop: https://www.docker.com/products/docker-desktop/"
+  if [[ "${INSTALL_PODMAN:-}" == "1" ]]; then
+    brew install podman || true
+    podman machine init 2>/dev/null || true
+    podman machine start || true
   fi
 fi
 
@@ -68,13 +78,18 @@ fi
 mkdir -p clients
 touch clients/.gitkeep
 
+mkdir -p handoffs
+touch handoffs/.gitkeep
+
 echo
 echo "==> Done. Next steps on the iMac:"
-echo "    1. Start Docker Desktop (if using Docker)"
+echo "    1. make ensure-runtime   # Podman machine up"
 echo "    2. cd $ROOT && make up && make smoke"
-echo "    3. make showcase   # http://localhost:8090"
+echo "    3. make showcase         # http://localhost:8090"
 echo "    4. make new-client NAME=demo-brand"
+echo "    5. make handoff NAME=demo-brand DO_ZIP=1   # client deliverable"
 echo
 echo "Design plan:  docs/DESIGN_PLAN.md"
 echo "Setup guide:  docs/SETUP_IMAC.md"
 echo "Scope form:   docs/templates/SCOPE_CONTRACT.md"
+echo "Handoff:      docs/DOCKER-HANDOFF.md"

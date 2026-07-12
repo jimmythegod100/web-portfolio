@@ -18,3 +18,4 @@ studio/clients/*/
 !studio/clients/README.md
 *.sql
 .docker/
+web-portfolio
